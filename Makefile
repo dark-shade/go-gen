@@ -12,7 +12,7 @@ test: generate fmt vet manifests
 	go test ./... -coverprofile cover.out
  
 # Build manager binary
-manager: generate fmt vet
+manager: fmt vet
 	go build -o bin/manager main.go
  
 # Run against the configured Kubernetes cluster in ~/.kube/config
@@ -26,4 +26,3 @@ fmt:
 # Run go vet against code
 vet:
 	go vet ./...
-	
